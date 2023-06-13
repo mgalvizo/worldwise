@@ -6,4 +6,11 @@ const convertToEmoji = countryCode => {
     return String.fromCodePoint(...codePoints);
 };
 
-export { convertToEmoji };
+const FAKE_USER = {
+    name: 'Jack',
+    email: 'jack@example.com',
+    password: 'qwerty',
+    avatar: 'https://i.pravatar.cc/100?u=zz',
+};
+
+export { convertToEmoji, FAKE_USER };
