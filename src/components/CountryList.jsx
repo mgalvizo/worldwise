@@ -1,10 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
+import { useCities } from '../hooks/useCities';
 import Spinner from './Spinner';
 import Message from './Message';
 import CountryItem from './CountryItem';
 import styles from './CountryList.module.css';
 
-const CountryList = ({ cities, isLoading }) => {
+const CountryList = () => {
+    const { cities, isLoading } = useCities();
     // Alternative to the set approach
     // const countries = cities.reduce((arr, city) => {
     //     if (!arr.map(element => element.country).includes(city.country)) {

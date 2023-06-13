@@ -1,9 +1,12 @@
+import { useCities } from '../hooks/useCities';
 import Spinner from './Spinner';
 import CityItem from './CityItem';
 import Message from './Message';
 import styles from './CityList.module.css';
 
-const CityList = ({ cities, isLoading }) => {
+const CityList = () => {
+    const { cities, isLoading } = useCities();
+
     const renderedCities = cities.map(city => {
         const { id } = city;
         return <CityItem key={id} city={city} />;
